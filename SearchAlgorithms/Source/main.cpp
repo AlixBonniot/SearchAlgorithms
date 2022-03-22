@@ -1,12 +1,9 @@
-#include "FileManager.h"
+#include "Maze.h"
 
 int main()
 {
-	std::fstream file{};
-	if (FileManager::OpenFile(file, "Assets/maze1.txt"))
-	{
-		FileManager::ReadFile(file);
-	}
+	Maze maze{ "../../../SearchAlgorithms/Assets/maze3.txt" };
+	maze.WriteMaze();
 
 	return 0;
 }
